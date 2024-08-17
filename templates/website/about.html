@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<title>Aida Roshani - About </title>
+<div id="main" class="site-main">
+  <div id="main-content" class="single-page-content">
+    <div id="primary" class="content-area">
+      <div id="content" class="page-content site-content single-post" role="main">
+        <!-- Home Page Top Part -->
+        <div class="row flex-v-align">
+
+          <div class="col-sm-12 col-md-5 col-lg-5">
+            <div class="home-photo">
+              <div class="hp-inner">
+                <img src="{%static '/img/main_photo.jpg' %}" style="background-image: url()">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-7 col-lg-7">
+            <div class="home-text hp-left">
+              <div class="owl-carousel text-rotation">
+                <div class="item">
+                  <h4>Software Engineer</h4>
+                </div>
+
+                <div class="item">
+                  <h4>Data Scientist</h4>
+                </div>
+              </div>
+
+              <h1>Aida Roshani</h1>
+              <p style="text-align:justify;">As an Industrial Engineering graduate from the University of Tehran, I
+                developed a keeninterest in computer science. My involvement as a staff member in events 
+                (Gamein2021, Sharif University) and connections with tech teams during university, 
+                ignited my fascination with this dynamic field.
+                My self-taught expertise in Python, SQL, and backend development techniques—including Git
+                and data structure and algorithms—has equipped me with a solid foundation. Recently, I made
+                the exciting decision to change my major to Computer Science after the university entrance
+                exam. Now, my goal is to pursue a computer science career in academia, too.
+                Known for my strong work ethic and unwavering commitment to continuous learning, I actively
+                seek opportunities to apply and expand these skills in a challenging role.</p>
+
+              <!-- <div class="home-buttons">
+                        <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
+                      </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col-xs-12 col-sm-12">
+            <div class="home-content">
+            </div>
+
+            <!--contact information-->
+            <div class="row">
+              <div class=" col-xs-12 col-sm-4 ">
+                <div class="info-block-w-icon">
+                  <div class="ci-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <div class="ci-text">
+                    <h4><a href="https://www.linkedin.com/in/aida-roshani-73b489181/">Linkedin</a></h4>
+                    <p>To checkout my Linkedin profile click here.</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-xs-12 col-sm-4 ">
+                <div class="info-block-w-icon">
+                  <div class="github icon">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <div class="ci-text">
+                    <h4><a href="https://github.com/Aaidaro">My Github Profile</a></h4>
+                    <p>Click the link above to visit my github profile and my projects code</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-xs-12 col-sm-4 ">
+                <div class="info-block-w-icon">
+                  <div class="ci-icon">
+                    <i class="fa-solid fa-square-envelope"></i>
+                  </div>
+                  <div class="ci-text">
+                    <img src="{%static '/img/Email.png' %}" style="max-width:200px">
+                    <p>If you want to get in touch with me, please use the Gmail address above.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--contact information-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

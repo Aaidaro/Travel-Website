@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="{{name}} Website" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio" />
+    <meta name="author" content="lmpixels" />
+
+
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <script src="{%static 'js/modernizr.custom.js' %}"></script>
+    <script src="https://kit.fontawesome.com/e4236025ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="page">
+
+    <div class="lm-animated-bg"></div>
+
+    <!-- Loading animation -->
+    <div class="preloader">
+        <div class="preloader-animation">
+            <div class="preloader-spinner">
+            </div>
+        </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <!-- Scroll To Top Button -->
+    <div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
+    <!-- /Scroll To Top Button -->
+
+    <div class="page-scroll">
+        <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
+
+            <!-- Header -->
+            <header id="site_header" class="header">
+                <div class="header-content clearfix">
+
+                    <!-- Text Logo -->
+                    <div class="text-logo">
+                        <a href="{% url 'website:about' %}" class="btn btn-primary">Main Page</a>
+                    </div>
+                    <!-- /Text Logo -->
+
+                    <!-- Navigation -->
+                    <div class="site-nav mobile-menu-hide">
+                        <ul class="leven-classic-menu site-main-menu">
+
+                            <li class="menu-item">
+                                <a href="{% url 'website:resume' %}"><b>Resume</b></a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="{% url 'website:projects' %}"><b>Projects</b></a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{% url 'blog:main' %}"><b>Blog</b></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <a class="menu-toggle mobile-visible">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                </div>
+            </header>
+
+            <!-- /Header -->
+            
+            {% block content%}
+
+            {% endblock %}
+
+            <!-- Footer -->
+            <footer class="site-footer clearfix">
+                <p></p>
+            </footer>
+            <!-- /Footer -->
+
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.shuffle.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.googlemap.js' %}"></script>
+    <script src="{% static 'js/validator.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

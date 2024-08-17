@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<title>Aida Roshani - {{post.title}} </title>
+<div id="main" class="site-main">
+  <div id="main-content" class="single-page-content">
+    <div id="primary" class="content-area">
+      <div id="content" class="page-content site-content" role="main">
+        <div class="ajax-page-nav">
+          <div class="nav-item ajax-page-close-button">
+              <a href="{% url 'blog:main' %}"><i class="lnr lnr-cross"></i></a>
+          </div>
+        </div>
+        <article class="post">
+          <header class="entry-header">
+            <div class="entry-meta entry-meta-top">
+              {% for cat in post.category.all %}
+              <span><a href="#" rel="category tag" title="View all posts in {{cat.name}}">{{cat.name}}</a></span>      
+              {% endfor %}
+            </div><!-- .entry-meta -->
+
+            <h2 class="entry-title">{{post.title}}</h2>
+          </header><!-- .entry-header -->
+
+          <div class="post-thumbnail">
+            <img src="{{post.image.url}}" alt="{{post.title}}"/>
+          </div>
+
+          <div class="post-content">
+            <div class="entry-content">
+              <div class="row">
+                <div class=" col-xs-12 col-sm-12">
+                    <p style="text-align:justify;">{{post.content}}</p>
+                </div>
+              </div>
+
+            </div><!-- .entry-content -->
+            <div class="entry-meta entry-meta-bottom">
+              <div class="date-author">
+                <span class="entry-date">
+                  <a href="#" rel="bookmark">
+                    <i class="far fa-clock"></i>
+                    <time class="entry-date">{{post.published_date|date:"F d, Y"}}</time>
+                  </a>
+                </span>
+                <span class="author vcard">
+                  <a class="url fn n" href="#" rel="author">
+                    <i class="fas fa-user"></i>
+                    <span>{{post.author.get_full_name}}</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="post-tags">
+              <span class="tags">
+                <a href="#" rel="tag">design</a>
+                <a href="#" rel="tag">plugin</a>
+                <a href="#" rel="tag">WordPress</a>
+              </span>
+            </div>
+
+            <div class="post-tags">
+              <span class="tags">
+                <b>{{post.counted_view}} Views</b>
+              </span>
+            </div>
+
+            <div class="row">
+              <div class=" col-xs-12 col-sm-4 ">
+                {% if previous_post %}
+                <a href="{% url 'blog:single' pid=previous_post.id %}">
+                  <div class="certificate-item clearfix">
+                    <div class="certi-content">
+                      <div class="certi-title">
+                        <p><i class="fa-solid fa-chevron-left"></i>Previous Post</p>
+                      </div>
+                      <div class="certi-id">
+                        <h5><span>{{previous_post.title}}</span></h5>
+                      </div>
+                      <div class="certi-date">
+                        <span>{{previous_post.counted_view}} Views</span>
+                      </div>
+                    </div>
+                    <div class="certi-logo">
+                      <img src="{{previous_post.image.url}}" alt="{{previous_post.title}}">
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+              </div>
+              <div class=" col-xs-12 col-sm-4 "></div>
+              <div class=" col-xs-12 col-sm-4 ">
+                {% if next_post %}
+                <a href="{% url 'blog:single' pid=next_post.id%}">
+                  <div class="certificate-item clearfix">
+                    <div class="certi-logo">
+                      <img src="{{next_post.image.url}}" alt="{{next_post.title}}">
+                    </div>
+                    <div class="certi-content">
+                      <div class="certi-title">
+                        <p>Next Post<i class="fa-solid fa-chevron-right"></i></p>
+                      </div>
+                      <div class="certi-id">
+                        <h5><span>{{next_post.title}}</span></h5>
+                      </div>
+                      <div class="certi-date">
+                        <span>{{next_post.counted_view}} Views</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div> 
+
+{% endblock %}
