@@ -1,102 +1,113 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
+{% block content %}
 
-<title>Aida Roshani - About </title>
-<div id="main" class="site-main">
-  <div id="main-content" class="single-page-content">
-    <div id="primary" class="content-area">
-      <div id="content" class="page-content site-content single-post" role="main">
-        <!-- Home Page Top Part -->
-        <div class="row flex-v-align">
 
-          <div class="col-sm-12 col-md-5 col-lg-5">
-            <div class="home-photo">
-              <div class="hp-inner">
-                <img src="{%static '/img/main_photo.jpg' %}" style="background-image: url()">
-              </div>
-            </div>
-          </div>
+<!-- start banner Area -->
+<section class="about-banner relative">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about-content col-lg-12">
+				<h1 class="text-white">
+					About Us
+				</h1>
+				<p class="text-white link-nav"><a href="{% url 'website:index' %}">Home </a> <span class="lnr lnr-arrow-right"></span>
+					<a href="{% url 'website:about' %}"> About Us</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
 
-          <div class="col-sm-12 col-md-7 col-lg-7">
-            <div class="home-text hp-left">
-              <div class="owl-carousel text-rotation">
-                <div class="item">
-                  <h4>Software Engineer</h4>
-                </div>
+<!-- Start about-info Area -->
+<section class="about-info-area section-gap">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6 info-left">
+				<img class="img-fluid" src="{% static 'img/about/info-img.jpg' %}" alt="">
+			</div>
+			<div class="col-lg-6 info-right">
+				<h6>About Us</h6>
+				<h1>Who We Are?</h1>
+				<p>
+					Here, I focus on a range of items and features that we use in life without giving them a second
+					thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End about-info Area -->
 
-                <div class="item">
-                  <h4>Data Scientist</h4>
-                </div>
-              </div>
-
-              <h1>Aida Roshani</h1>
-              <p style="text-align:justify;">As an Industrial Engineering graduate from the University of Tehran, I
-                developed a keeninterest in computer science. My involvement as a staff member in events 
-                (Gamein2021, Sharif University) and connections with tech teams during university, 
-                ignited my fascination with this dynamic field.
-                My self-taught expertise in Python, SQL, and backend development techniques—including Git
-                and data structure and algorithms—has equipped me with a solid foundation. Recently, I made
-                the exciting decision to change my major to Computer Science after the university entrance
-                exam. Now, my goal is to pursue a computer science career in academia, too.
-                Known for my strong work ethic and unwavering commitment to continuous learning, I actively
-                seek opportunities to apply and expand these skills in a challenging role.</p>
-
-              <!-- <div class="home-buttons">
-                        <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
-                      </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class=" col-xs-12 col-sm-12">
-            <div class="home-content">
-            </div>
-
-            <!--contact information-->
-            <div class="row">
-              <div class=" col-xs-12 col-sm-4 ">
-                <div class="info-block-w-icon">
-                  <div class="ci-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </div>
-                  <div class="ci-text">
-                    <h4><a href="https://www.linkedin.com/in/aida-roshani-73b489181/">Linkedin</a></h4>
-                    <p>To checkout my Linkedin profile click here.</p>
-                  </div>
-                </div>
-              </div>
-              <div class=" col-xs-12 col-sm-4 ">
-                <div class="info-block-w-icon">
-                  <div class="github icon">
-                    <i class="fa-brands fa-github"></i>
-                  </div>
-                  <div class="ci-text">
-                    <h4><a href="https://github.com/Aaidaro">My Github Profile</a></h4>
-                    <p>Click the link above to visit my github profile and my projects code</p>
-                  </div>
-                </div>
-              </div>
-              <div class=" col-xs-12 col-sm-4 ">
-                <div class="info-block-w-icon">
-                  <div class="ci-icon">
-                    <i class="fa-solid fa-square-envelope"></i>
-                  </div>
-                  <div class="ci-text">
-                    <img src="{%static '/img/Email.png' %}" style="max-width:200px">
-                    <p>If you want to get in touch with me, please use the Gmail address above.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--contact information-->
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!-- Start other-issue Area -->
+<section class="other-issue-area section-gap">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-9">
+				<div class="title text-center">
+					<h1 class="mb-10">Other issues we can help you with</h1>
+					<p>We all live in an age that belongs to the young at heart. Life that is.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="single-other-issue">
+					<div class="thumb">
+						<img class="img-fluid" src="{% static 'img/o1.jpg' %}" alt="">
+					</div>
+					<a href="#">
+						<h4>Rent a Car</h4>
+					</a>
+					<p>
+						The preservation of human life is the ultimate value, a pillar of ethics and the foundation.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="single-other-issue">
+					<div class="thumb">
+						<img class="img-fluid" src="{% static 'img/o2.jpg' %}" alt="">
+					</div>
+					<a href="#">
+						<h4>Cruise Booking</h4>
+					</a>
+					<p>
+						I was always somebody who felt quite sorry for myself, what I had not got compared.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="single-other-issue">
+					<div class="thumb">
+						<img class="img-fluid" src="{% static 'img/o3.jpg' %}" alt="">
+					</div>
+					<a href="#">
+						<h4>To Do List</h4>
+					</a>
+					<p>
+						The following article covers a topic that has recently moved to center stage–at least it seems.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="single-other-issue">
+					<div class="thumb">
+						<img class="img-fluid" src="{% static 'img/o4.jpg' %}" alt="">
+					</div>
+					<a href="#">
+						<h4>Food Features</h4>
+					</a>
+					<p>
+						There are many kinds of narratives and organizing principles. Science is driven by evidence.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End other-issue Area -->
 {% endblock %}

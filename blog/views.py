@@ -4,7 +4,7 @@ from blog.models import Post
 def blog_main_view(request):
     published_posts = Post.get_published_posts()
     context = {'published_posts':published_posts}
-    return render(request, 'blog/blog_main.html', context)
+    return render(request, 'blog/blog-main.html', context)
 
 def single_blog_view(request, pid):
     published_posts = Post.get_published_posts()
@@ -14,7 +14,7 @@ def single_blog_view(request, pid):
     post.counted_view += 1
     post.save()
     context = {'post':post, 'next_post':next_post, 'previous_post':previous_post}
-    return render(request, 'blog/blog_single.html', context)
+    return render(request, 'blog/blog-single.html', context)
 
 # def test_view(request, pid):
 #     post = Post.objects.get(id=pid)
