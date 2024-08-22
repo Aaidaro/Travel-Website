@@ -29,10 +29,10 @@ class Post(models.Model):
     updated_date = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["created_date"]
+        ordering = ["-created_date"]
 
     def __str__(self) -> str:
-        return f"{self.title}"
+        return f"{self.title}-{self.id}"
     
     def get_published_posts():
         published_posts = Post.objects.filter(status= 1, published_date__lte= timezone.now())
