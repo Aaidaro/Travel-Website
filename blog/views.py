@@ -16,6 +16,5 @@ def single_blog_view(request, pid):
     context = {'post':post, 'next_post':next_post, 'previous_post':previous_post}
     return render(request, 'blog/blog-single.html', context)
 
-def test_view(request, name):
-    context = {'name' : name}
-    return render(request, 'test.html', context)
+def test_view(request):
+    return render(request, 'test.html')
