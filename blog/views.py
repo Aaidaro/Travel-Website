@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from blog.models import Post
 
-def blog_main_view(request):
-    published_posts = Post.get_published_posts()
-    context = {'published_posts':published_posts}
+def blog_main_view(request, cat_name=None):
+    posts = Post.get_published_posts()
+    if cat_name:
+        posts = posts.filter(category__name = cat_name)
+    context = {'posts':posts}
     return render(request, 'blog/blog-home.html', context)
 
 def single_blog_view(request, pid):
